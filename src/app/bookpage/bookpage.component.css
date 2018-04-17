@@ -1,0 +1,54 @@
+.row{
+     margin-left: 100px;
+}
+.card {
+    max-width: 250px;
+    margin-top: 50px;
+    max-height: 350px;
+  }
+  .header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  .button-row{
+    position: absolute;
+    right: 2px;
+    bottom: 78px;
+
+  }
+  .div button p{
+     font-size: 1.8rem;
+  }
+  .header-image{
+    position: absolute;
+    left: 3px;
+    top:3px;
+  }
+ 
+/* rotation of cards */
+.card2 .side{
+  backface-visibility: hidden;
+}
+side:hover{
+  display: none;
+}
+.card2:hover {
+  transform: rotateY(180deg);
+}
+
+.card2 .back {
+  transform: rotateY(180deg);
+  line-height: 50%;
+  text-align: center;
+  
+}
+.card2{
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+.align-text-image p{
+
+  position: relative;
+  margin-bottom: 10rem;
+}
+

@@ -1,0 +1,47 @@
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<mat-card class="mat-card-example">
+  <mat-card-content>
+    <nav>    
+      <div class="row container" style="padding: 0px">          
+      <ul class="main-nav ml-auto">
+      <li>Book-Name</li>
+      <li>Quantity</li> 
+      <li>Unit-Price</li>
+      <li>Sub-Total</li>                  
+      </ul>
+    </div>   
+  </nav> 
+  </mat-card-content>
+</mat-card>
+</div>
+  </div>
+  </div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<mat-grid-list cols="1" gutterSize="5px" rowHeight="70px" class="grid-books">
+    <mat-grid-tile class="grid-tile"  
+        *ngFor="let d of data"
+        [style.background]="'lightpink'">
+       
+      <span style="position: absolute; left:140px;">{{d.BookName}}</span>
+    <span style="position: absolute; left: 420px;"><mat-form-field>
+          <mat-select placeholder="1">
+            <mat-option  *ngFor="let q of quantity" [value]="q.value" (click)="selectedOn(q.value,d)">
+      {{q.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field></span>
+    <span style="position: absolute; left: 690px;">{{d.BookPrice}}</span>
+     <span style="position: absolute;left: 1200px;"> <button mat-raised-button (click)="removeItem(d)" color="warn" style="outline: none">Delete</button></span>
+   
+    </mat-grid-tile>
+  </mat-grid-list>
+  </div>
+  </div>
+  </div>
+  
+ 
+      

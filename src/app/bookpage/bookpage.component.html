@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-xs-3" *ngFor="let d of data" >
+      <mat-card class="card card2">
+        <div #div1 class="side">   
+          <mat-card-header> 
+            <div mat-card-avatar class="header-image"></div> 
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p style="font-size:20px"><strong>{{d.BookName}}</strong><br/>&#169; <em style="font-size:15px;">{{d.BookAuthor}}</em></p>
+          </mat-card-content>
+        </div>
+        <div class="side back">
+         <!-- {{d.BookName}}
+         {{d.BookAuthor}} -->
+         {{d.ProductType}}  
+            <mat-card-actions>
+                <div class="button-row">
+                    <button mat-raised-button [disabled]="isValidForm(d.id)" (click)="clickMe(d)"  color="primary" style="outline:none">Book</button>
+                  </div>
+              </mat-card-actions>
+        </div>
+    </mat-card>
+  </div>
+  </div>
+  </div>
